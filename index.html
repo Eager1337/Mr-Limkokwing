@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nyakeh Michelle Kamanda — Mr. Limkokwing 2025</title>
+  <meta name="description" content="Campaign portfolio for Nyakeh Michelle Gideon Kamanda — Theme: No Student Left Behind. Slogan: Empower. Educate. Elevate." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --panel:#0f0f0f;
+      --accent:#ffffff;
+      --muted:#bdbdbd;
+      --primary:#e6e6e6;
+      --glass:rgba(255,255,255,0.04);
+      --accent-2:#9aa4ad; /* subtle cool tone */
+      --max-width:1100px;
+      --radius:12px;
+      --transition:250ms ease;
+      --blue-accent: #1e90ff; /* optional small blue accent */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,var(--bg),#080808);
+      color:var(--primary);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+    .container{max-width:var(--max-width);margin:0 auto;padding:32px}
+
+    /* NAV */
+    header{position:sticky;top:0;backdrop-filter:blur(6px);z-index:60}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,#1f1f1f, #000);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent);font-size:20px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    .brand h1{margin:0;font-size:16px;letter-spacing:0.4px}
+    .navlinks{display:flex;gap:18px;align-items:center}
+    .navlinks a{color:var(--muted);text-decoration:none;font-weight:600;font-size:14px}
+    .cta{background:transparent;border:1px solid var(--accent);padding:8px 12px;border-radius:8px;color:var(--accent);text-decoration:none;font-weight:700}
+    .hero{
+      display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0
+    }
+    @media(max-width:880px){
+      .hero{grid-template-columns:1fr;padding:28px 0}
+      .navlinks{display:none}
+    }
+
+    /* Hero card */
+    .hero-left{padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:14px}
+    .theme{display:inline-block;padding:6px 10px;background:var(--glass);border-radius:999px;color:var(--accent-2);font-weight:700;margin-bottom:14px}
+    h2{margin:6px 0 8px;color:var(--accent);font-size:28px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .buttons{display:flex;gap:12px;margin-top:14px}
+    .btn-primary{background:var(--accent);color:#000;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.08);padding:10px 14px;border-radius:10px;color:var(--accent)}
+
+    .hero-right{display:flex;flex-direction:column;gap:12px;align-items:center}
+    .portrait{width:100%;max-width:360px;border-radius:14px;overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,0.7);border:1px solid rgba(255,255,255,0.03)}
+    .portrait img{width:100%;height:100%;object-fit:cover;display:block}
+
+    /* Sections */
+    section{margin-top:28px}
+    .panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.02)}
+
+    /* Platform grid */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    @media(max-width:880px){.grid{grid-template-columns:1fr}}
+    .tile{padding:18px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);border:1px solid rgba(255,255,255,0.025)}
+    .tile h3{margin:0 0 8px}
+    .tile p{color:var(--muted);margin:0}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    @media(max-width:880px){.gallery{grid-template-columns:repeat(2,1fr)}}
+    .gallery .item{height:120px;border-radius:8px;overflow:hidden;background:#111;display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:700}
+
+    /* Event + tickets */
+    .event{display:flex;gap:18px;align-items:center}
+    .event-info{flex:1}
+    .ticket-card{width:260px;padding:16px;border-radius:12px;background:linear-gradient(180deg,#0e0e0e,#0a0a0a);border:1px solid rgba(255,255,255,0.03)}
+    .ticket-card h4{margin:0 0 6px}
+    .ticket-card p{color:var(--muted);margin:0 0 12px}
+    .ticket-count{display:flex;gap:8px;align-items:center}
+    .count{font-size:20px;font-weight:800}
+    .ticket-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;color:var(--accent);cursor:pointer}
+
+    /* Contact */
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:var(--primary)}
+    textarea{min-height:120px}
+    .submit{background:var(--accent);color:#000;padding:10px;border-radius:8px;border:none;cursor:pointer}
+
+    footer{margin:32px 0 60px;color:var(--muted);font-size:13px}
+
+    /* small utilities */
+    .muted{color:var(--muted)}
+    .center{display:flex;align-items:center;justify-content:center}
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">
+          <div class="ME.jpeg">NM</div>
+          <div>
+            <h1>Nyakeh Michelle Gideon Kamanda</h1>
+            <div class="muted">Mr. Limkokwing 2025 Candidate</div>
+          </div>
+        </div>
+        <div class="navlinks">
+          <a href="#about">About</a>
+          <a href="#platform">Platform</a>
+          <a href="#media">Media</a>
+          <a href="#event">Event</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <a class="cta" href="#event">Get Tickets</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <div class="hero-left panel">
+        <span class="theme">No Student Left Behind</span>
+        <h2>Empower. Educate. Elevate.</h2>
+        <p class="lead">I’m Nyakeh Michelle Gideon Kamanda an IT student, a peer mentor, and a candidate for Mr. Limkokwing 2025. My mission is to build a campus where academic support and collaboration are available to everyone.</p>
+
+        <div class="buttons">
+          <a class="btn-primary" href="#contact">Join the Team</a>
+          <a class="btn-ghost" href="#platform">My Platform</a>
+        </div>
+
+        <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+          <div style="width:6px;height:6px;background:var(--accent);border-radius:999px"></div>
+          <div class="muted">Theme: <strong>No Student Left Behind</strong> • Slogan: <strong>Empower. Educate. Elevate.</strong></div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="portrait">
+          <!-- Replace the src with your portrait image (recommended high-res). -->
+          <img src="ME.jpeg" alt="Candidate portrait" />
+        </div>
+        <div style="width:100%;max-width:360px;text-align:center;color:var(--muted);font-size:14px">Stand with me. Let’s make sure no student at Limkokwing is left behind.</div>
+      </div>
+    </section>
+
+    <section id="about" class="panel">
+      <h3>About Me</h3>
+      <p class="muted">Nyakeh Michelle Gideon Kamanda — IT (Software & Hardware) student, creative thinker, and peer mentor. I believe leadership is service. I love helping others learn and watching potential transform into achievement.</p>
+      <div style="display:flex;gap:18px;margin-top:12px;flex-wrap:wrap">
+        <div class="tile" style="min-width:220px">
+          <h3>Background</h3>
+          <p class="muted">Faculty of Information & Communication Technology. Passionate about tech, design, and community empowerment.</p>
+        </div>
+        <div class="tile" style="min-width:220px">
+          <h3>Values</h3>
+          <p class="muted">Service • Integrity • Collaboration • Growth</p>
+        </div>
+        <div class="tile" style="min-width:220px">
+          <h3>Vision</h3>
+          <p class="muted">A Limkokwing where every student feels supported, confident, and capable of success.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="platform" class="panel">
+      <h3>Platform — No Student Left Behind</h3>
+      <p class="muted">My platform focuses on building peer-to-peer support systems, cross-faculty collaboration, and open study spaces so everyone can access the help they need.</p>
+
+      <div class="grid" style="margin-top:12px">
+        <div class="tile">
+          <h3>Peer-to-Peer Network</h3>
+          <p class="muted">Organize mentorship groups and study buddies so students can learn from each other — not compete in silence.</p>
+        </div>
+        <div class="tile">
+          <h3>Open Study Sessions</h3>
+          <p class="muted">Weekly help corners (on-campus + online) for assignments, exams, and module reviews.</p>
+        </div>
+        <div class="tile">
+          <h3>Cross-Faculty Collaboration</h3>
+          <p class="muted">Connect skills across departments — tech helping design, design helping marketing, and so on.</p>
+        </div>
+        <div class="tile">
+          <h3>Student Empowerment</h3>
+          <p class="muted">Provide workshops and short tutorials focused on practical skills and study strategies.</p>
+        </div>
+        <div class="tile">
+          <h3>Mental & Academic Support</h3>
+          <p class="muted">Encourage asking for help, normalize failure as part of learning, and provide resources to bounce back.</p>
+        </div>
+        <div class="tile">
+          <h3>Tracking Progress</h3>
+          <p class="muted">Simple ticket-sale tracking and volunteer hours so supporters can see campaign impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="media" class="panel">
+      <h3>Gallery & Media</h3>
+      <p class="muted">Campaign shots, videos, and behind-the-scenes. Replace images below with your photos or embed your promo video.</p>
+
+      <div class="gallery" style="margin-top:12px">
+        <div class="item"><img src="PIC 1.jpeg" alt="Photo 1" height="190" /></div>
+        <div class="item"><img src="PIC 2.jpeg" alt="Photo 2" height="100" width="200"></div>
+        <div class="item"><img src="PIC 3.jpeg" alt="Photo 3" height="100" width="200"></div>
+        <div class="item"><img src="PIC 4.jpeg" alt="Photo 4" height="100" width="200"></div>
+        <div class="item"><img src="PIC 5.jpeg" alt="Photo 5" height="100" width="200"></div>
+        <div class="item"><img src="PIC 6.jpeg" alt="Photo 6" height="100" width="200"></div>
+      </div>
+
+<div style="margin-top:14px" class="panel">
+  <h4>Intro Video</h4>
+  
+  <div style="margin-top:8px;aspect-ratio:16/9;background:#000;border-radius:10px;position:relative;overflow:hidden;">
+    <video style="position:absolute;top:0;left:0;width:100%;height:100%;" controls>
+      <source src="VID 1.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<!--
+      <div style="margin-top:14px" class="panel">
+        <h4>Campaign Video</h4>
+        <p class="muted">Another video option — maybe a personal message or a montage of campus support.</p>
+        <div style="margin-top:8px;aspect-ratio:16/9;background:#000;border-radius:10px;position:relative;overflow:hidden;">
+  Your browser does not support the video tag.
+</video></div>
+      </div>
+    </section>
+  -->
+    <section id="event" class="panel">
+      <h3>Event & Tickets</h3>
+      <div class="event">
+        <div class="event-info">
+          <p class="muted">Support tickets are limited — each participant received 15 tickets. Selling them all contributes to the grading system. There is no online voting — attendance and live support are what count. If you want a ticket, contact me directly.</p>
+          <ul class="muted">
+            <li><strong>Event:</strong> Mr. & Miss Limkokwing Pageant 2025</li>
+            <li><strong>Date:</strong> <span id="eventDate">November 22, 2025</span></li>
+            <li><strong>Venue:</strong> Limkokwing University</li>
+          </ul>
+        </div>
+
+        <div class="ticket-card">
+          <h4>Tickets Sold</h4>
+          <p class="muted">Track campaign ticket sales here — this is an internal tracker and not connected to payment gateways. Use it to show progress.</p>
+          <div style="margin-top:10px" class="ticket-count">
+            <div class="count" id="soldCount">0</div>
+            <div class="muted">/ 15</div>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <button class="ticket-btn" id="decreaseBtn">-</button>
+            <button class="ticket-btn" id="increaseBtn">+</button>
+            <button class="ticket-btn" id="resetBtn">Reset</button>
+          </div>
+
+          <div style="margin-top:12px;font-size:13px;color:var(--muted)">Share this page and bring your friends — the louder you cheer, the stronger our campaign looks!</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="panel">
+      <h3>Join the Team / Contact</h3>
+      <p class="muted">Want to volunteer, get tickets, or partner with the campaign? Send a message and I’ll get back to you.</p>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="Your name" required />
+        <input type="email" id="email" placeholder="Your email (optional)" />
+        <textarea id="message" placeholder="How would you like to help? (tickets, volunteering, shoutouts...)" required></textarea>
+        <button class="submit" type="submit">Send Message</button>
+      </form>
+
+      <div style="margin-top:12px;color:var(--muted)">Or contact directly via WhatsApp: <a href="https://wa.me/+23275299798" style="color:var(--accent);text-decoration:none">Message me</a></div>
+    </section>
+
+    <footer class="center">
+      <div>
+        <div style="font-weight:700">Nyakeh Michelle Gideon Kamanda</div>
+        <div class="muted">Mr. Limkokwing 2025 Candidate • Theme: No Student Left Behind</div>
+        <div style="margin-top:10px" class="muted">© <span id="year"></span></div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script>
+    // Simple interactivity: ticket tracker + contact form handling (mailto fallback)
+    const soldCountEl = document.getElementById('soldCount');
+    const increaseBtn = document.getElementById('increaseBtn');
+    const decreaseBtn = document.getElementById('decreaseBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const maxTickets = 15;
+
+    // load saved state from localStorage
+    let sold = parseInt(localStorage.getItem('soldTickets')||'0',10);
+    if(isNaN(sold)) sold = 0;
+    const updateSold = ()=>{
+      if(sold<0) sold=0; if(sold>maxTickets) sold=maxTickets;
+      soldCountEl.textContent = sold;
+      localStorage.setItem('soldTickets',sold);
+    }
+    updateSold();
+
+    increaseBtn.addEventListener('click',()=>{ sold++; updateSold(); });
+    decreaseBtn.addEventListener('click',()=>{ sold--; updateSold(); });
+    resetBtn.addEventListener('click',()=>{ if(confirm('Reset sold tickets to 0?')){ sold=0; updateSold(); }});
+
+    // contact form: open mailto with prefilled content (fallback for simple hosting)
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit',(e)=>{
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Campaign Support / Volunteer: ' + name);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nMessage: ${message}`);
+      // Replace INSERT_EMAIL with your preferred recipient email address
+      const mailto = `mailto:INSERT_EMAIL?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    });
+
+    // small utils
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // smooth scroll behavior for in-page nav
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',(e)=>{
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});}        
+      });
+    });
+
+  </script>
+</body>
+</html>
